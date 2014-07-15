@@ -23,3 +23,5 @@ console.log();
 
 console.log(41, arr.splice(2));
 console.log(42, arr);
+
+// Esercizio: la classe Array ha MOLTE funzioni. Sperimentane alcune! (http://www.w3schools.com/jsref/jsref_obj_array.asp)

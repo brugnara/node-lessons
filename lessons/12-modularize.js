@@ -1,3 +1,5 @@
+var expect = require('chai').expect;
+
 var sum = require('./12-module-sum');
 console.log(sum(1, 3));
 
@@ -18,3 +20,11 @@ console.log(c.diff());
 var c2 = new Calc(5, 4);
 console.log(c2.sum());
 console.log(c2.diff());
+
+// Troverai il tuo metodo migliore per scrivere un modulo.
+// Ora però, implementa i metodi per e diviso (con controllo /0 che deve restituire null) per il modulo 12-module-calc.js
+// decommentando queste funzioni, dovrà funzionare correttamente tutto (non dare errori)
+
+// expect(calc.per(5, 4)).to.equal(20);
+// expect(calc.diviso(30, 5)).to.equal(6);
+// expect(calc.diviso(30, 0)).to.be.null;

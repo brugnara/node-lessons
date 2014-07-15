@@ -3,28 +3,29 @@
 var arr = [1, 2, 3, 4];
 
 arr.forEach(function(item) {
-  console.log(item);
+  console.log(1, item);
 });
 
 var len = arr.length;
+var i;
 
-for (var i=0;i<len;i++) {
-  console.log(arr[i]);
+for (i=0;i<len;i++) {
+  console.log(2, arr[i]);
 }
 
-var i = 0;
+i = 0;
 for (;i<len;i++) {
-  console.log(arr[i]);
+  console.log(3, arr[i]);
 }
 
 i = 0;
 for (;i<len;) {
-  console.log(arr[i++]);
+  console.log(4, arr[i++]);
 }
 
 i = 0;
 while(i<len) {
-  console.log(arr[i++]);
+  console.log(5, arr[i++]);
 }
 
 // object iteration
@@ -38,7 +39,7 @@ var obj = {
 
 for (var k in obj) {
   var el = obj[k];
-  console.log(k, el);
+  console.log(6, k, el);
 }
 
 obj.nested = {
@@ -50,7 +51,7 @@ obj.nested = {
 
 var fn = function(obj) {
   for (var k in obj) {
-    console.log(k, obj[k]);
+    console.log(7, k, obj[k]);
   }
 };
 
@@ -63,7 +64,7 @@ var fn2 = function(obj) {
     if (typeof el === 'object') {
       fn2(el);
     } else {
-      console.log(k, el);
+      console.log(8, k, el);
     }
   }
 };
