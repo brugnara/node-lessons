@@ -30,3 +30,19 @@ console.log('Ciao numero: %s, ed una stringa %s', 12, 'hola');
 // ma questa, darà un risultato ben diverso!
 console.log('Ciao numero: %d, ed una stringa %s', 'non sono unnumero!', 'hola');
 
+// se console.log è comodo per output, se vogliamo lavorare su stringhe, useremo il modulo util
+var pattern = 'Ciao %s come stai? - %s, grazie!';
+var str = util.format(pattern, 'Daniele', "Bene");
+console.log(str);
+
+// Possiamo usarlo esattamente come console.log, per concatenare:
+str = util.format('Hello', 'World', '!');
+console.log(str);
+
+// E combinando le cose (vale anche per console.log
+str = util.format(pattern, 'Daniele', 'Male', 'Men despiar!');
+console.log(str);
+
+// replace
+str = 'ciao come va. Come vot che la vae. Son chi che me rompo le balotole';
+console.log(str.replace('che', 'CHE'));
