@@ -4,6 +4,7 @@ var obj = {
   hello: 'world',
   bool: true,
   numeric: 2,
+  float: 2.5,
   external: myVal,
   nullValue: null,
   'complex-name': 'value',

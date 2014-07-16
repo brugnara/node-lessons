@@ -7,7 +7,11 @@ var fn = function(nr) {
   return (!!(nr%2)) ? 'dispari' : 'pari';
 };
 
-var result = arr.map(fn);
+var result = null;
+result = arr.map(fn);
+arr.push(10);
+console.log(arr);
+console.log(result);
 
 // Do not edit lines after this one
 

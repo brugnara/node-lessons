@@ -4,10 +4,11 @@ var fn = function(data) {
 
 function fn2(data) {
   var len = data.length;
+  console.log(len);
 };
 
 var arr = 'ciao come va'.split(' ');
 
 // fn(arr);
-// fn2(arr);
+fn2(arr);
 console.log(len);

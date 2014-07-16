@@ -7,13 +7,24 @@ var fn = function(item, cb) {
   }, 0);
 };
 
-async.forEach(arr,  function(item, cb) {
-  fn(item,  function(err, val) {
-    console.log(val);
-    cb(err, val);
-  });
-}, function(err) {
-  console.log('FINE ESECUZIONE');
+
+async.series([
+  function(cb) {
+    async.forEach(arr,  function(item, cb) {
+      fn(item,  function(err, val) {
+        console.log(val);
+        cb(err, val);
+      });
+    }, function(err) {
+      console.log('FINE ESECUZIONE');
+      cb(err);
+    });
+  },
+  function(cb) {
+    fn(2002, cb);
+  }
+], function(err){
+  console.log('Ho finito ancora');
 });
 
 // each
