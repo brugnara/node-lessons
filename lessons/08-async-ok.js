@@ -36,3 +36,5 @@ async.each(arr,  function(item, cb) {
 }, function(err) {
   console.log('FINE ESECUZIONE');
 });
+
+// perché async?
