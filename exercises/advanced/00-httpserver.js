@@ -12,10 +12,13 @@ server.get('/hello/:name', function(req, res, cb) {
   console.log('Richiesta: %s. Faremo aspettare il client %d ms.', hash, timeout);
   setTimeout(function() {
     console.log('Sto rispondendo alla richiesta %s!', hash);
+    res.send(404);
+    /*
     res.json({
       hi: req.params.name,
       timeWaited: timeout
     });
+    */
     cb();
   }, timeout);
 });
